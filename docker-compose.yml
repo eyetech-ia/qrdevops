@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  api:
+    build: ../qrapi/
+    container_name: eyetech.qrapi
+    networks:
+      - backend
+    ports:
+      - "3333:3333"
+    volumes:
+      - ../qrapi:/app
+  frontend:
+    container_name: eyetech.qrfront
+    build: ../qrfront/
+    networks:
+      - backend
+    ports:
+      - 80:8080
+    depends_on:
+      - api
+networks:
+  backend:
+    driver: bridge

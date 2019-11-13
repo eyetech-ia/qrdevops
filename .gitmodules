@@ -1,0 +1,6 @@
+[submodule "qrapi"]
+	path = qrapi
+	url = git@github.com:eyetech-ia/qrapi.git
+[submodule "qrfront"]
+	path = qrfront
+	url = git@github.com:eyetech-ia/qrfront.git
